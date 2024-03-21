@@ -66,7 +66,7 @@ class MenuGrid extends StatelessWidget {
             'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
   ];
 
-  const MenuGrid({super.key});
+  MenuGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class MenuGrid extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 'Your favorites',
                 style: TextStyle(
                   fontSize: 18,
@@ -87,18 +87,18 @@ class MenuGrid extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text(
+                style: TextButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 78, 187, 255),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: const BorderSide(color: Color.fromARGB(255, 78, 187, 255)),
+                  ),
+                ),
+                child: const Text(
                   'Edit',
                   style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.bold,
-                  ),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 78, 187, 255),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    side: BorderSide(color: Color.fromARGB(255, 78, 187, 255)),
                   ),
                 ),
               ),
@@ -108,7 +108,7 @@ class MenuGrid extends StatelessWidget {
         Expanded(
           child: GridView.builder(
             padding: const EdgeInsets.all(20),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
@@ -131,7 +131,7 @@ class MenuItemWidget extends StatelessWidget {
   final String title;
   final String imagePath;
 
-  MenuItemWidget({required this.title, required this.imagePath});
+  const MenuItemWidget({super.key, required this.title, required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
@@ -144,10 +144,10 @@ class MenuItemWidget extends StatelessWidget {
             height: 48,
             width: 48,
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
             ),
           ),
