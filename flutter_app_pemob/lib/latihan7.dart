@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Latihan 7',
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Goyek',
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          backgroundColor: Color.fromARGB(255, 1, 137, 222),
+          backgroundColor: const Color.fromARGB(255, 1, 137, 222),
         ),
         body: MenuGrid(),
       ),
@@ -63,6 +65,8 @@ class MenuGrid extends StatelessWidget {
         image:
             'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
   ];
+
+  const MenuGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
