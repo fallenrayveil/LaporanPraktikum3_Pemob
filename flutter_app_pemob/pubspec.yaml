@@ -52,7 +52,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/CheckIn.png
+    - assets/GoCar.png
+    - assets/GoFood.png
+    - assets/GoMart.png
+    - assets/GoPulsa.png
+    - assets/GoRide.png
+    - assets/GoSend.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
