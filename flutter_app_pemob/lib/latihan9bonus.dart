@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             'Penuhi Lindungi',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
           ),
-          backgroundColor: Color.fromARGB(255, 168, 168, 168),
+          backgroundColor: const Color.fromARGB(255, 20, 157, 216),
           elevation: 30,
         ),
         body: Column(
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: const Color.fromARGB(255, 20, 157, 216),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(3.0),
                     child: Image.asset(
-                      'assets/tangan.jpg',
+                      './assets/icontangan.png',
                       width: 100,
                       height: 100,
                     ),
@@ -130,7 +130,7 @@ class MyApp extends StatelessWidget {
                         // Action when button pressed
                       },
                       icon: Image.asset(
-                        'assets/scan.png',
+                        './assets/scanner.png',
                         width: 24,
                         height: 24,
                         color: const Color.fromARGB(255, 7, 97, 171),
@@ -174,12 +174,30 @@ class MenuItem {
 
 class MenuGrid extends StatelessWidget {
   final List<MenuItem> menuItems = [
-    MenuItem(title: 'Covid19 Vaccine', image: 'assets/vaccine.jpg'),
-    MenuItem(title: 'Covid19 Test Result', image: 'assets/results.jpg'),
-    MenuItem(title: 'EHAC', image: 'assets/ehac.jpg'),
-    MenuItem(title: 'Travel Regulations', image: 'assets/travel.jpg'),
-    MenuItem(title: 'Telemedicine', image: 'assets/telemedicine.jpg'),
-    MenuItem(title: 'Healthcare Facility', image: 'assets/healthcare.jpg'),
+    MenuItem(
+      title: 'Covid-19 Vaccine',
+      image: './assets/vaksin.png', 
+      ),
+    MenuItem(
+      title: 'Covid-19 Test Result', 
+      image: './assets/test.png'
+      ),
+    MenuItem(
+      title: 'EHAC', 
+      image: './assets/ehac.png'
+      ),
+    MenuItem(
+      title: 'Travel Regulations',
+      image: './assets/aturan.png'
+      ),
+    MenuItem(
+      title: 'Telemedicine', 
+      image: './assets/teledokter.png'
+      ),
+    MenuItem(
+      title: 'Healthcare Facility', 
+      image: './assets/pelkes.png'
+      ),
   ];
 
   MenuGrid({super.key});
@@ -207,7 +225,6 @@ class MenuGrid extends StatelessWidget {
 class MenuItemWidget extends StatelessWidget {
   final String title;
   final String image;
-
   const MenuItemWidget({super.key, required this.title, required this.image});
 
   @override
@@ -216,8 +233,8 @@ class MenuItemWidget extends StatelessWidget {
       children: <Widget>[
         Image.asset(
           image,
-          height: 64,
-          width: 64,
+          height: 65,
+          width: 65,
         ),
         const SizedBox(height: 5),
         Text(
