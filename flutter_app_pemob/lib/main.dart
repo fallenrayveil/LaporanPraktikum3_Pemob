@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LayarKedua extends StatelessWidget {
-  const LayarKedua({Key? key}) : super(key: key);
+  const LayarKedua({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 
 //perlu  dipisah karena Navigator perlu punya parent Material App
 class MyHome extends StatelessWidget {
-  const MyHome({Key? key}) : super(key: key);
+  const MyHome({super.key});
 
   @override
   Widget build(BuildContext context) {
