@@ -62,6 +62,14 @@ flutter:
     - assets/GoSend.png
     - assets/upncover.jpg
     - assets/upnpfp.jpg
+    - assets/vaksin.png
+    - assets/test.png
+    - assets/icontangan.png
+    - assets/scanner.png
+    - assets/ehac.png
+    - assets/aturan.png
+    - assets/teledokter.png
+    - assets/pelkes.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
