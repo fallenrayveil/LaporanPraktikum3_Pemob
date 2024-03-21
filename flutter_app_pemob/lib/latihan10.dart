@@ -1,18 +1,22 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: const MyHomePage(),
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          color: const Color.fromARGB(255, 0, 140, 255),
+        appBarTheme: const AppBarTheme(
+          color: Color.fromARGB(255, 0, 140, 255),
         ),
       ),
     );
@@ -20,7 +24,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
+  
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -43,20 +50,20 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Latihan 10'),
+        title: const Text('Latihan 10'),
         bottom: TabBar(
           controller: _tabController,
-          tabs: [
+          tabs: const [
             Tab(text: 'For You'),
             Tab(text: 'Following'),
           ],
-          labelColor: Colors.white, // Mengatur warna teks tab yang dipilih
-          indicatorColor: Colors.white, // Mengatur warna indikator TabBar
+          labelColor: Colors.white, 
+          indicatorColor: Colors.white, 
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           ForYouTab(),
           FollowingTab(),
         ],
@@ -66,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 }
 
 class ForYouTab extends StatelessWidget {
+  const ForYouTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -74,13 +83,13 @@ class ForYouTab extends StatelessWidget {
         return Column(
           children: [
             ListTile(
-              leading: FlutterLogo(),
+              leading: const FlutterLogo(),
               title: Text('Data ke $index'),
               onTap: () {},
             ),
-            Divider(
+            const Divider(
               thickness: 1,
-              color: const Color.fromARGB(255, 224, 224, 224),
+              color: Color.fromARGB(255, 224, 224, 224),
             ),
           ],
         );
@@ -90,17 +99,19 @@ class ForYouTab extends StatelessWidget {
 }
 
 class FollowingTab extends StatelessWidget {
+  const FollowingTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 6.0,
         mainAxisSpacing: 6.0,
       ),
       itemCount: 4,
       itemBuilder: (context, index) {
-        return Center(
+        return const Center(
           child: Image(
             image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
             width: 100,
