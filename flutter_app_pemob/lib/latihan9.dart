@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Latihan 9',
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Penuhi Lindungi',
             style: TextStyle(color: Colors.white),
           ),
@@ -24,13 +24,13 @@ class MyApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              color: Color.fromARGB(255, 4, 102, 182),
+              color: const Color.fromARGB(255, 11, 103, 178),
               height: 100,
               child: Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -38,16 +38,16 @@ class MyApp extends StatelessWidget {
                           Text(
                             'Entering a Public Space?',
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(height: 4),
+                          SizedBox(height: 5),
                           Text(
                             'Stay alert to stay safe',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 15,
                               color: Colors.white,
                             ),
                           ),
@@ -81,11 +81,13 @@ class MenuGrid extends StatelessWidget {
     'Covid19 Vaccine','Covid19 Test Result','EHAC','Covid19 Vaccine','Covid19 Test Result','EHAC'
   ];
 
+  MenuGrid({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.all(20),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         mainAxisSpacing: 8.0,
         crossAxisSpacing: 8.0,
@@ -105,7 +107,7 @@ class MenuItem extends StatelessWidget {
   final String title;
   final String image;
 
-  MenuItem({required this.title, required this.image});
+  const MenuItem({super.key, required this.title, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -115,14 +117,14 @@ class MenuItem extends StatelessWidget {
         children: <Widget>[
           Image.network(
             image,
-            height: 64,
-            width: 64,
+            height: 65,
+            width: 65,
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 5),
           Text(
             title,
-            style: TextStyle(
-              fontSize: 12,
+            style: const TextStyle(
+              fontSize: 15,
             ),
           ),
         ],
