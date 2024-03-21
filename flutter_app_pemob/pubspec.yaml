@@ -60,6 +60,8 @@ flutter:
     - assets/GoPulsa.png
     - assets/GoRide.png
     - assets/GoSend.png
+    - assets/upncover.jpg
+    - assets/upnpfp.jpg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
