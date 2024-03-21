@@ -141,14 +141,14 @@ class MenuItemWidget extends StatelessWidget {
         children: <Widget>[
           Image.network(
             imagePath,
-            height: 48,
-            width: 48,
+            height: 50,
+            width: 50,
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 5),
           Text(
             title,
             style: const TextStyle(
-              fontSize: 12,
+              fontSize: 15,
             ),
           ),
         ],
